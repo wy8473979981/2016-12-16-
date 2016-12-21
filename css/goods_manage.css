@@ -1,0 +1,224 @@
+.modal .modal-backdrop {
+  background-color: #FFFF00;
+  opacity: 0;
+  filter: alpha(opacity=0); }
+.modal .modal-dialog {
+  margin-top: 180px; }
+  .modal .modal-dialog .modal-body .row {
+    margin: 5px 0; }
+  .modal .modal-dialog .modal-body .select2-container {
+    width: 100%; }
+.modal .modal-header,
+.modal .modal-footer {
+  border: none;
+  text-align: center; }
+
+.content {
+  margin: 110px auto 130px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+  @media all and (max-width: 640px) {
+    .content {
+      margin: 2.1rem auto 2.2rem; } }
+  .content .nav-tabs {
+    margin-top: 50px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #28aac5; }
+    .content .nav-tabs li a {
+      border: none;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      border-radius: 4px;
+      color: #606060; }
+      .content .nav-tabs li a:hover, .content .nav-tabs li a:active, .content .nav-tabs li a:focus {
+        border: none;
+        color: #fff;
+        background-color: #28aac5; }
+    .content .nav-tabs li.active a {
+      color: #fff;
+      background-color: #28aac5; }
+  .content .tab-content .orderContent {
+    min-height: 100px;
+    margin-top: 33px;
+    height: auto; }
+    .content .tab-content .orderContent .order_list_1 {
+      border: 1px solid #ccc; }
+      .content .tab-content .orderContent .order_list_1 .table {
+        margin-bottom: 0; }
+        .content .tab-content .orderContent .order_list_1 .table .list_1_img_detail .detail_img {
+          width: 130px;
+          height: 96px;
+          margin: 10px;
+          float: left; }
+          .content .tab-content .orderContent .order_list_1 .table .list_1_img_detail .detail_img a img {
+            border: 1px solid #ccc; }
+        .content .tab-content .orderContent .order_list_1 .table .list_1_img_detail .detail_text {
+          margin: 10px;
+          float: left; }
+          .content .tab-content .orderContent .order_list_1 .table .list_1_img_detail .detail_text p:nth-child(2) {
+            margin-top: 20px; }
+        .content .tab-content .orderContent .order_list_1 .table .price_box {
+          margin: 10px; }
+          .content .tab-content .orderContent .order_list_1 .table .price_box p {
+            margin: 20px; }
+        .content .tab-content .orderContent .order_list_1 .table tr:first-child td:last-child {
+          border-left: 1px solid #ccc; }
+  .content .tab-content .formContent {
+    border: 1px solid #ccc;
+    margin-top: 33px; }
+    .content .tab-content .formContent table {
+      margin: 0; }
+      .content .tab-content .formContent table caption {
+        line-height: 50px; }
+        .content .tab-content .formContent table caption .btn-default {
+          border-color: #28aac5; }
+          .content .tab-content .formContent table caption .btn-default a {
+            color: #28aac5; }
+      .content .tab-content .formContent table thead {
+        background-color: #f4f4f4; }
+      .content .tab-content .formContent table tr th,
+      .content .tab-content .formContent table tr td {
+        padding: 22px 8px; }
+      .content .tab-content .formContent table tbody tr td:last-child a:nth-child(2) {
+        margin: 0 20px;
+        color: red; }
+
+.phone_address_list {
+  display: none; }
+
+.p_add_address {
+  display: none; }
+
+@media all and (max-width: 640px) {
+  .pc_messages_dom {
+    display: none; }
+
+  .content {
+    margin: 1.1rem auto 1.3rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between; } }
+  @media all and (max-width: 640px) and (max-width: 640px) {
+    .content {
+      margin: 2.1rem auto 2.2rem; } }
+@media all and (max-width: 640px) {
+    .content .nav-tabs {
+      margin-top: 0.1rem;
+      padding-bottom: 5px;
+      border-bottom: 2px solid #28aac5;
+      display: -webkit-flex;
+      display: flex; }
+      .content .nav-tabs li {
+        flex: 1;
+        text-align: center; }
+        .content .nav-tabs li a {
+          border: none;
+          -webkit-border-radius: 4px;
+          -moz-border-radius: 4px;
+          border-radius: 4px;
+          color: #606060; }
+          .content .nav-tabs li a:hover, .content .nav-tabs li a:active, .content .nav-tabs li a:focus {
+            border: none;
+            color: #fff;
+            background-color: #28aac5; }
+        .content .nav-tabs li .active {
+          color: #fff;
+          background-color: #28aac5; }
+    .content .tab-content .orderContent {
+      min-height: 100px;
+      margin-top: 33px;
+      height: auto; }
+      .content .tab-content .orderContent .order_list_1 {
+        border: 1px solid #ccc; }
+        .content .tab-content .orderContent .order_list_1 .table {
+          margin-bottom: 0; }
+          .content .tab-content .orderContent .order_list_1 .table .list_1_img_detail .detail_img {
+            width: 130px;
+            height: 96px;
+            margin: 10px;
+            float: left; }
+            .content .tab-content .orderContent .order_list_1 .table .list_1_img_detail .detail_img a img {
+              border: 1px solid #ccc; }
+          .content .tab-content .orderContent .order_list_1 .table .list_1_img_detail .detail_text {
+            margin: 10px;
+            float: left; }
+            .content .tab-content .orderContent .order_list_1 .table .list_1_img_detail .detail_text p:nth-child(2) {
+              margin-top: 20px; }
+          .content .tab-content .orderContent .order_list_1 .table .price_box {
+            margin: 10px; }
+            .content .tab-content .orderContent .order_list_1 .table .price_box p {
+              margin: 20px; }
+          .content .tab-content .orderContent .order_list_1 .table tr:first-child td:last-child {
+            border-left: 1px solid #ccc; }
+    .content .tab-content .formContent {
+      border: none;
+      margin-top: 0; }
+      .content .tab-content .formContent .phone_address_list {
+        display: block; }
+        .content .tab-content .formContent .phone_address_list .p_new_address {
+          margin: 0.2rem 0; }
+        .content .tab-content .formContent .phone_address_list .card {
+          font-size: 0.28rem;
+          margin-bottom: 0.24rem;
+          border: 0.01rem solid #d1d1d1;
+          border-radius: 0.06rem;
+          box-shadow: 0 0.04rem 0.08rem rgba(50, 50, 50, 0.3); }
+          .content .tab-content .formContent .phone_address_list .card .card_info {
+            padding: 0.2rem;
+            border-radius: 0.06rem 0.06rem 0 0;
+            border-bottom: 0.01rem solid #e1e1e1;
+            background-color: #fff;
+            line-height: 1.5; }
+            .content .tab-content .formContent .phone_address_list .card .card_info p:first-child span:first-child {
+              float: left; }
+            .content .tab-content .formContent .phone_address_list .card .card_info p:first-child span:last-child {
+              float: right; }
+          .content .tab-content .formContent .phone_address_list .card .card_bottom {
+            padding: 0.12rem 0.2rem 0.04rem;
+            border-radius: 0 0 0.06rem 0.06rem;
+            border-top: 0.01rem solid #f2f2f2;
+            background-color: #f4f4f4;
+            color: #5e5e5e;
+            overflow: hidden; }
+            .content .tab-content .formContent .phone_address_list .card .card_bottom .card_bottom_left {
+              float: left; }
+              .content .tab-content .formContent .phone_address_list .card .card_bottom .card_bottom_left .check {
+                display: -webkit-inline-box;
+                display: -webkit-inline-flex;
+                display: -moz-inline-box;
+                display: -ms-inline-flexbox;
+                display: inline-flex;
+                -webkit-box-align: center;
+                -webkit-align-items: center;
+                -moz-box-align: center;
+                -ms-flex-align: center;
+                align-items: center; }
+                .content .tab-content .formContent .phone_address_list .card .card_bottom .card_bottom_left .check .check-text {
+                  margin-left: 0.1rem; }
+            .content .tab-content .formContent .phone_address_list .card .card_bottom .card_bottom_right {
+              float: right; }
+              .content .tab-content .formContent .phone_address_list .card .card_bottom .card_bottom_right .operate_item {
+                display: -webkit-inline-box;
+                display: -webkit-inline-flex;
+                display: -moz-inline-box;
+                display: -ms-inline-flexbox;
+                display: inline-flex;
+                -webkit-box-align: center;
+                -webkit-align-items: center;
+                -moz-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                margin-left: 0.4rem; }
+      .content .tab-content .formContent .p_add_address {
+        display: none; }
+        .content .tab-content .formContent .p_add_address .p_add_address_btn div button:last-child {
+          float: right; }
+        .content .tab-content .formContent .p_add_address .col-xs-12 {
+          margin: 0.15rem 0; }
+        .content .tab-content .formContent .p_add_address .select2-container {
+          width: 100%; } }
+
+/*# sourceMappingURL=goods_manage.css.map */

@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>收货管理</title>
+
+		<!--rem js-->
+		<script src="../js/rem.js" type="text/javascript" charset="utf-8"></script>
+
+		<!--style reset -->
+		<link rel="stylesheet" type="text/css" href="../css/reset.css" />
+
+		<!-- Bootstrap -->
+		<link rel="stylesheet" type="text/css" href="../plugins/bootstrap_v3.3.3/dist/css/bootstrap.min.css" />
+
+		<!--The current page style-->
+		<link rel="stylesheet" type="text/css" href="../css/headAndFooter.css" />
+		<link rel="stylesheet" type="text/css" href="../css/goods_manage.css" />
+
+		<!--Icon Font style-->
+		<link rel="stylesheet" type="text/css" href="../plugins/iconfont/iconfont.css">
+		<link rel="stylesheet" type="text/css" href="../plugins/jq_address/css/select2.css" />
+		<link rel="stylesheet" type="text/css" href="../plugins/jq_address/css/common.css" />
+
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+	</head>
+
+	<body>
+		<!--pc head start-->
+		<header class="pc_dom">
+			<div class="header">
+				<div class="col-xs-12">
+					<div class="row row_center">
+						<div class="col-xs-3 header_logo text-center">
+							<a href="#">
+								<img src="../images/head_logo.png" />
+							</a>
+						</div>
+						<div class="col-xs-4 header_nav">
+							<ul class="hn_ul">
+								<li class="tabLi">
+									<a href="">商城首页</a>
+								</li>
+								<li>
+									<a href="">开发板</a>
+								</li>
+								<li>
+									<a href="">配件</a>
+								</li>
+							</ul>
+						</div>
+						<div class="col-xs-5 header_help">
+							<div class="help_top">
+								<ul class="hp_ul">
+									<li>
+										<a href="">帮助</a>
+									</li>
+									<li>
+										<a href="">|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;English</a>
+									</li>
+									<li>
+										<a href="">中文 </a>
+									</li>
+									<li>
+										<a href="">我的账户</a>
+									</li>
+								</ul>
+							</div>
+							<div class="help_bottom">
+								<form role="form form-inline">
+									<div class="col-xs-12">
+										<div class="search row">
+											<div class="shopCar ">
+												<div class="btn btn-default btnCar"><i class="iconfont icon-gouwuche"></i>购物车</div>
+												<div class="carNumber">99</div>
+											</div>
+											<div class="v_search" id="search">
+												<form action="" method="GET" accept-charset="utf-8">
+													<div class="in_con">
+														<input id="tags" class="search_input ui-autocomplete-input" type="text" autocomplete="off" placeholder="圣诞礼物" value="" name="keyword" style="color:grey;">
+														<input class="search_b" type="button" value="搜&nbsp;索">
+													</div>
+												</form>
+											</div>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</header>
+		<!--pc head end-->
+
+		<!--phone head start-->
+		<header class="phone_dom">
+			<div class="p_head">
+				<div class="p_logo">
+					<a href="#">
+						<img src="../images/head_phone_logo.png" />
+					</a>
+				</div>
+				<div class="p_help">
+					<ul class="p_hp_ul">
+						<li>
+							<a href="">帮助</a>
+						</li>
+						<li>
+							<a href="">|&nbsp;&nbsp;English</a>
+						</li>
+						<li>
+							<a href="">中文 </a>
+						</li>
+						<li>
+							<a href="">我的账户</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="p_nav">
+				<ul class="p_ul">
+					<li>
+						<a href="">商城首页</a>
+					</li>
+					<li class="p_ul_li_active">
+						<a href="">开发板</a>
+					</li>
+					<li>
+						<a href="">配件</a>
+					</li>
+					<li>
+						<a href=""><i class="iconfont icon-sousuo"></i></a>
+						<a href=""><i class="iconfont icon-gouwuche"></i></a>
+					</li>
+				</ul>
+			</div>
+		</header>
+		<!--phone head end-->
+
+		<!--pc content start-->
+		<!--模态框 开始-->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title" id="myModalLabel">添加收货地址</h4>
+					</div>
+					<div class="modal-body">
+						<form class=" " action="" method="post">
+							<div class="row">
+								<div class="col-xs-6 col-lg-6 form-group">
+									<div class="row">
+										<div class="col-xs-5 col-sm-5">
+											<label for="title">收货人</label>
+										</div>
+										<div class="col-xs-7 col-sm-7">
+											<input type="text" id="suppNumber" name="suppNumber" class="form-control" placeholder="收货人" autofocus>
+										</div>
+									</div>
+								</div>
+								<div class="col-xs-6 col-lg-6 form-group">
+									<div class="row">
+										<div class="col-xs-5 col-sm-5">
+											<label for="title">联系电话</label>
+										</div>
+										<div class="col-xs-7 col-sm-7">
+											<input type="text" id="suppNumber" name="suppNumber" class="form-control" placeholder="联系电话" autofocus>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-12 col-lg-12 form-group">
+									<div class="row">
+										<div class="col-xs-4 col-sm-4">
+											<select name="loc_province" id="loc_province">
+											</select>
+										</div>
+										<div class="col-xs-4 col-sm-4">
+											<select name="loc_city" id="loc_city">
+											</select>
+										</div>
+										<div class="col-xs-4 col-sm-4">
+											<select name="loc_town" id="loc_town">
+											</select>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-12 col-lg-12 form-group">
+									<div class="row">
+										<div class="col-xs-4 col-sm-4 text-center">
+											<label for="title">详细地址</label>
+										</div>
+										<div class="col-xs-8 col-sm-8">
+											<input type="text" id="suppNumber" name="suppNumber" class="form-control" placeholder="详细地址" autofocus>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-12 col-lg-12 form-group">
+									<div class="row">
+										<div class="col-xs-4 col-sm-4 text-center">
+											<input type="checkbox" name="" id="" value="" />
+											<a href="#">设为默认地址</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary" data-dismiss="modal">保存</button>
+						<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--模态框 结束-->
+		<section class="container content">
+			<div class="col-xs-12">
+				<div class="row">
+					<ul class="nav nav-tabs" role="tablist" id="myTab">
+						<li role="presentation" class="active" >
+							<a href="#home" role="tab" data-toggle="tab">我的账户</a>
+						</li>
+						<li role="presentation">
+							<a href="#profile" role="tab" data-toggle="tab">我的订单</a>
+						</li>
+						<li role="presentation">
+							<a href="#messages" role="tab" data-toggle="tab">收货管理</a>
+						</li>
+					</ul>
+
+					<div class="tab-content">
+						<div role="tabpanel" class="tab-pane active" id="home">
+							<div class="col-lg-12">
+								<div class="row">
+									<form class="form-horizontal">
+										<div id="legend" class="">
+											<legend class="">表单名</legend>
+										</div>
+										<div class="control-group">
+
+											<!-- Text input-->
+											<label class="control-label" for="input01">Text input</label>
+											<div class="controls">
+												<input type="text" placeholder="placeholder" class="input-xlarge">
+												<p class="help-block">Supporting help text</p>
+											</div>
+										</div>
+
+										<div class="control-group">
+
+											<!-- Search input-->
+											<label class="control-label">Search input</label>
+											<div class="controls">
+												<input type="text" placeholder="placeholder" class="input-xlarge search-query">
+												<p class="help-block">Supporting help text</p>
+											</div>
+
+										</div>
+
+										<div class="control-group">
+
+											<!-- Text input-->
+											<label class="control-label" for="input01">Text input</label>
+											<div class="controls">
+												<input type="text" placeholder="placeholder" class="input-xlarge">
+												<p class="help-block">Supporting help text</p>
+											</div>
+										</div>
+
+										<div class="control-group">
+
+											<!-- Text input-->
+											<label class="control-label" for="input01">Text input</label>
+											<div class="controls">
+												<input type="text" placeholder="placeholder" class="input-xlarge">
+												<p class="help-block">Supporting help text</p>
+											</div>
+										</div>
+
+										<div class="control-group">
+
+											<!-- Text input-->
+											<label class="control-label" for="input01">Text input</label>
+											<div class="controls">
+												<input type="text" placeholder="placeholder" class="input-xlarge">
+												<p class="help-block">Supporting help text</p>
+											</div>
+										</div>
+
+									</form>
+								</div>
+							</div>
+						</div>
+						<div role="tabpanel" class="tab-pane" id="profile">
+							<div class="orderContent">
+								<div class="order_list_1">
+									<table class="table">
+										<thead>
+											<tr>
+												<th colspan="3">订单编号 ：11111111</th>
+												<th class="text-right">
+													<span>2016-12-16</span>
+													<a href="#"><span>订单详情</span></a>
+												</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>
+													<div class="list_1_img_detail">
+														<div class="detail_img">
+															<a href="#">
+																<img src="images/detail_img_1.png" />
+															</a>
+														</div>
+														<div class="detail_text">
+															<p>开发板平台A</p>
+															<p>商品编号： <span>111111111</span></p>
+														</div>
+													</div>
+												</td>
+												<td>
+													<div class="price_box">
+														<p>￥100</p>
+													</div>
+												</td>
+												<td>
+													<div class="price_box">
+														<p>X1</p>
+													</div>
+												</td>
+												<td rowspan="2">
+													<div class="price_box text-center">
+														<p>共<span>2</span>件商品，合计</p>
+														<p>￥100</p>
+														<button type="button" class="btn btn-primary">已付款</button>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="list_1_img_detail">
+														<div class="detail_img">
+															<a href="#">
+																<img src="images/detail_img_1.png" />
+															</a>
+														</div>
+														<div class="detail_text">
+															<p>开发板平台A</p>
+															<p>商品编号： <span>111111111</span></p>
+														</div>
+													</div>
+												</td>
+												<td>
+													<div class="price_box">
+														<p>￥100</p>
+													</div>
+												</td>
+												<td>
+													<div class="price_box">
+														<p>X1</p>
+													</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						<div role="tabpanel" class="tab-pane" id="messages">
+							<div class="table-responsive formContent">
+								<form class="address_form_list" action="" method="post">
+									<!--pc dom start-->
+									<table id="data" class="table pc_messages_dom">
+										<caption>
+											<div class="tab_title col-xs-6">
+												地址管理
+											</div>
+											<div class="col-xs-6 text-right">
+												<div class="btn btn-default new_address_model">
+													<a href="#">添加新地址</a>
+												</div>
+											</div>
+										</caption>
+										<thead>
+											<tr>
+												<th class="col-xs-3">收件人</th>
+												<th class="col-xs-3">详细地址</th>
+												<th class="col-xs-3">练习电话</th>
+												<th class="col-xs-3">操作</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>本地方式</td>
+												<td>雪女</td>
+												<td>dayan@163.com</td>
+												<td>
+													<a href="#">
+														<span id="">
+														修改
+													</span>
+													</a>
+													<a href="#">
+														<span id="">
+														删除
+													</span>
+													</a>
+													<a href="#">
+														<span id="">
+														设为默认地址
+													</span>
+													</a>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									<!--pc dom end-->
+
+									<!--phone dom start-->
+									<div class="phone_address_list">
+										<div class="p_new_address text-center">
+											<div class="btn btn-default p_new_address_model">添加新地址</div>
+										</div>
+										<div class="p_address_card card">
+											<div class="card_info">
+												<p class="card_user"><span class="card_user_name">汪洋</span> <span class="card_user_mobile">136****5662</span></p>
+												<br />
+												<p class="card_detail">上海上海市闵行区浦江镇陈行路</p>
+											</div>
+											<div class="card_bottom">
+												<div class="card_bottom_left">
+													<div class="p_address_check check">
+														<input type="checkbox" name="" id="" value="" />
+														<span class="check-text">设为默认地址</span>
+													</div>
+												</div>
+												<div class="card_bottom_right">
+													<div class="p_address_operate operate">
+														<div class="operate_item"><span class="operate_item_text">编辑</span></div>
+														<div class="operate_item"><span class="operate_item_text">删除</span></div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!--phone dom end-->
+								</form>
+								<!--phone add new  address start-->
+								<div class="p_add_address">
+									<form class="" action="" method="post">
+										<div class="row">
+											<div class="col-xs-12">
+												<label for="title">收货人</label>
+											</div>
+											<div class="col-xs-12">
+												<input type="text" id="suppNumber" name="suppNumber" class="form-control" placeholder="收货人" autofocus>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-xs-12">
+												<label for="title">联系电话</label>
+											</div>
+											<div class="col-xs-12">
+												<input type="text" id="suppNumber" name="suppNumber" class="form-control" placeholder="联系电话" autofocus>
+											</div>
+										</div>
+
+										<div class="row">
+											<div class="col-xs-12 col-lg-12 form-group">
+												<div class="row">
+													<div class="col-xs-4">
+														<label for="title">请选择省份</label>
+													</div>
+													<div class="col-xs-8">
+														<select name="loc_province" id="loc_province">
+
+														</select>
+													</div>
+
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-xs-12 col-lg-12 form-group">
+												<div class="row">
+													<div class="col-xs-4">
+														<label for="title">请选择地区</label>
+													</div>
+													<div class="col-xs-8">
+														<select name="loc_city" id="loc_city">
+														</select>
+													</div>
+
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-xs-12 col-lg-12 form-group">
+												<div class="row">
+													<div class="col-xs-4">
+														<label for="title">请选择街道</label>
+													</div>
+													<div class="col-xs-8">
+														<select name="loc_town" id="loc_town">
+														</select>
+													</div>
+
+												</div>
+											</div>
+										</div>
+
+										<div class="row">
+											<div class="col-xs-12 col-lg-12 form-group">
+												<div class="row">
+													<div class="col-xs-4">
+														<label for="title">详细地址</label>
+													</div>
+													<div class="col-xs-8">
+														<input type="text" id="suppNumber" name="suppNumber" class="form-control" placeholder="详细地址" autofocus>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-xs-12 col-lg-12 form-group">
+												<div class="row">
+													<div class="col-xs-12">
+														<input type="checkbox" name="" id="" value="" />
+														<a href="#">设为默认地址</a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row p_add_address_btn">
+											<div class="col-xs-12 col-lg-12 form-group">
+												<button type="button" class="btn btn-primary col-xs-5" data-dismiss="modal">保存</button>
+												<button type="button" class="btn btn-default col-xs-5" data-dismiss="modal">取消</button>
+											</div>
+										</div>
+									</form>
+								</div>
+								<!--phone add new  address end-->
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!--pc content end-->
+
+		<!--pc footer start-->
+		<footer>
+			<p class="text-center">Copyright © 2008-2016 权所有京ICP备09012701号-1</p>
+			<p class="text-center">6 瑞美嘉信国（权所有京ICP备090127</p>
+		</footer>
+
+		<!--pc footer end-->
+
+	</body>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="../plugins/jquery/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="../plugins/bootstrap_v3.3.3/dist/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../plugins/jq_address/js/select2.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../plugins/jq_address/js/location.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../plugins/jq_address/js/area.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function() {
+			$('#myModal').modal({
+				backdrop: 'static',
+				keyboard: false,
+				show: false
+			});
+
+		})
+		$('.new_address_model').click(function() {
+			$('#myModal').modal("show");
+		})
+
+		/*移动端点击新增地址按钮事件*/
+		$('.p_new_address_model').click(function() {
+			$('.address_form_list').css({
+				"display": "none"
+			});
+			$(".p_add_address").css({
+				"display": "block"
+			});
+		})
+	</script>
+
+</html>

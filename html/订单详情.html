@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>订单详情</title>
+
+		<!--rem js-->
+		<script src="../js/rem.js" type="text/javascript" charset="utf-8"></script>
+
+		<!--style reset -->
+		<link rel="stylesheet" type="text/css" href="../css/reset.css" />
+
+		<!-- Bootstrap -->
+		<link rel="stylesheet" type="text/css" href="../plugins/bootstrap_v3.3.3/dist/css/bootstrap.min.css" />
+
+		<!--The current page style-->
+		<link rel="stylesheet" type="text/css" href="../css/订单详情.css" />
+
+		<!--Icon Font style-->
+		<link rel="stylesheet" type="text/css" href="../plugins/iconfont/iconfont.css">
+
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+	</head>
+
+	<body>
+		<!--pc head start-->
+		<header class="pc_dom">
+			<div class="header">
+				<div class="col-xs-12">
+					<div class="row row_center">
+						<div class="col-xs-3 header_logo text-center">
+							<a href="#">
+								<img src="../images/head_logo.png" />
+							</a>
+						</div>
+						<div class="col-xs-4 header_nav">
+							<ul class="hn_ul">
+								<li class="tabLi">
+									<a href="">商城首页</a>
+								</li>
+								<li>
+									<a href="">开发板</a>
+								</li>
+								<li>
+									<a href="">配件</a>
+								</li>
+							</ul>
+						</div>
+						<div class="col-xs-5 header_help">
+							<div class="help_top">
+								<ul class="hp_ul">
+									<li>
+										<a href="">帮助</a>
+									</li>
+									<li>
+										<a href="">|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;English</a>
+									</li>
+									<li>
+										<a href="">中文 </a>
+									</li>
+									<li>
+										<a href="">我的账户</a>
+									</li>
+								</ul>
+							</div>
+							<div class="help_bottom">
+								<form role="form form-inline">
+									<div class="col-xs-12">
+										<div class="search row">
+											<div class="shopCar ">
+												<div class="btn btn-default btnCar"><i class="iconfont icon-gouwuche"></i>购物车</div>
+												<div class="carNumber">99</div>
+											</div>
+											<div class="v_search" id="search">
+												<form action="" method="GET" accept-charset="utf-8">
+													<div class="in_con">
+														<input id="tags" class="search_input ui-autocomplete-input" type="text" autocomplete="off" placeholder="圣诞礼物" value="" name="keyword" style="color:grey;">
+														<input class="search_b" type="button" value="搜&nbsp;索">
+													</div>
+												</form>
+											</div>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</header>
+		<!--pc head end-->
+
+		<!--phone head start-->
+		<header class="phone_dom">
+			<div class="p_head">
+				<div class="p_logo">
+					<a href="#">
+						<img src="../images/head_phone_logo.png" />
+					</a>
+				</div>
+				<div class="p_help">
+					<ul class="p_hp_ul">
+						<li>
+							<a href="">帮助</a>
+						</li>
+						<li>
+							<a href="">|&nbsp;&nbsp;English</a>
+						</li>
+						<li>
+							<a href="">中文 </a>
+						</li>
+						<li>
+							<a href="">我的账户</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="p_nav">
+				<ul class="p_ul">
+					<li>
+						<a href="">商城首页</a>
+					</li>
+					<li class="p_ul_li_active">
+						<a href="">开发板</a>
+					</li>
+					<li>
+						<a href="">配件</a>
+					</li>
+					<li>
+						<a href=""><i class="iconfont icon-sousuo"></i></a>
+						<a href=""><i class="iconfont icon-gouwuche"></i></a>
+					</li>
+				</ul>
+			</div>
+		</header>
+		<!--phone head end-->
+
+		<!--pc content start-->
+
+		<section class="container content">
+			<div class="col-xs-12">
+				<div class="row">
+					<ul class="nav nav-tabs" role="tablist" id="myTab">
+						<li role="presentation" class="active">
+							<a href="#home" role="tab" data-toggle="tab">我的账户</a>
+						</li>
+						<li role="presentation">
+							<a href="#profile" role="tab" data-toggle="tab">我的订单</a>
+						</li>
+						<li role="presentation">
+							<a href="#messages" role="tab" data-toggle="tab">收货管理</a>
+						</li>
+					</ul>
+
+					<div class="tab-content">
+						<div role="tabpanel" class="tab-pane active" id="home">
+							<div class="order_info">
+								<div class="col-lg-12 col-xs-12">
+									<div class="row">
+										<div class="box">
+											<div class="col-lg-12  col-xs-12 order_number">
+												<span>订单编号 ：</span><span class="number">1111111</span>
+												<span class="order_date">2016-12-20</span>
+												<p>订单状态 ： <span class="order_status">下单成功，请尽快支付</span></p>
+											</div>
+											<div class="col-lg-12 col-xs-12 order_plan_status hidden-xs">
+												<div class="row text-center">
+													<div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 no_padding">订单提交</div>
+													<div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 no_padding">付款成功</div>
+													<div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 no_padding">订单确认</div>
+													<div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 no_padding">卖家发货</div>
+													<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 hidden-xs">等待收货</div>
+													<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 hidden-xs">完成交易</div>
+													<div class=" box_status">
+
+													</div>
+												</div>
+
+											</div>
+											<!--phone 订单状态  开始-->
+											<div class="phone_status_box visible-xs-block">
+												<ul class="pinxiang1-list">
+													<li class="">
+														<span class="status">订单提交</span>
+														<span class="status">付款成功</span>
+														<span class="status">订单确认</span>
+														<span class="status">卖家发货</span>
+														<span class="status">等待收货</span>
+														<span class="status">完成交易</span>
+													</li>
+													<li class="status2  status_bg"></li>
+												</ul>
+											</div>
+											<!--phone 订单状态 结束-->
+
+											<div class="col-lg-12 col-xs-12 order_list">
+												<div class="item row">
+													<div class="left col-lg-6 col-xs-9">
+														<span class="order_img">
+														<img src="../images/detail_img_1.png">
+													</span>
+														<div class="order_dec">
+															<h5>开发板A平台</h5>
+															<p>商品编号： <span class="order_num">11111111</span></p>
+														</div>
+													</div>
+													<div class="right col-lg-6 col-xs-3 text-right">
+														<span class="col-lg-4 col-xs-12 text_color_red">￥ <span class="unit-price">100</span></span>
+														<span class="col-lg-4 col-xs-12">X<span class="unit-num">1</span></span>
+														<span class="col-lg-4 col-xs-4 text_color_red hidden-xs">小计&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;￥ <span class="summation">100</span></span>
+													</div>
+												</div>
+												<div class="item row">
+													<div class="left col-lg-6 col-xs-9">
+														<span class="order_img">
+														<img src="../images/detail_img_1.png">
+													</span>
+														<div class="order_dec">
+															<h5>开发板A平台</h5>
+															<p>商品编号： <span class="order_num">11111111</span></p>
+														</div>
+													</div>
+													<div class="right col-lg-6 col-xs-3 text-right">
+														<span class="col-lg-4 col-xs-12 text_color_red">￥ <span class="unit-price">100</span></span>
+														<span class="col-lg-4 col-xs-12 ">X<span class="unit-num">1</span></span>
+														<span class="col-lg-4 col-xs-4 text_color_red hidden-xs">小计&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;￥ <span class="summation">100</span></span>
+													</div>
+												</div>
+											</div>
+											<div class="clearBoth"></div>
+										</div>
+										<div class="col-lg-12 col-xs-12 pay_address">
+											<p class="hidden-xs">收货信息</p>
+											<div class="addressContent row">
+												<div class="money col-lg-4 col-xs-12">
+													<div class="all_money_info">
+														<p><span>商品总价</span><span class="text_color_red text_right">￥<span class="all_price">100</span></span>
+														</p>
+														<p><span>发票税额</span><span class="text_color_red text_right">+ ￥<span class="tax_mount">4158</span></span>
+														</p>
+														<p><span>运费</span><span class="text_color_red text_right">+ ￥<span class="freight">444</span></span>
+														</p>
+														<p><span>应付款金额</span><span class="text_color_red text_right">￥<span class="pay_money">1111111</span></span>
+														</p>
+													</div>
+												</div>
+												<div class="pay text-right visible-xs-block">
+													<div class="btn btn-default btn_cancel">取消订单</div>
+													<div class="btn btn-primary btn_yes">立即支付</div>
+												</div>
+
+												<div class="address col-lg-8 col-xs-12">
+													<div>
+														<ul class="col-lg-4 col-xs-4">
+															<li>收货人姓名</li>
+															<li>地址</li>
+															<li>联系电话</li>
+															<li>配送方式</li>
+															<li>快递单号</li>
+															<li>发票信息</li>
+														</ul>
+														<ul class="col-lg-8 col-xs-8 text-right">
+															<li>汪洋</li>
+															<li>山西省阳泉市郊区sadfasdfasdfasdf</li>
+															<li>13641905662</li>
+															<li>圆通快递</li>
+															<li>0111111111111</li>
+															<li>国际信息技国际信息技术（北京）有限公司 </li>
+														</ul>
+													</div>
+
+												</div>
+
+											</div>
+											<div class="pay text-right hidden-xs">
+												<div class="btn btn-default btn_cancel">取消订单</div>
+												<div class="btn btn-primary btn_yes">立即支付</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="clearBoth"></div>
+
+							</div>
+
+						</div>
+						<div role="tabpanel" class="tab-pane" id="profile">
+
+						</div>
+						<div role="tabpanel" class="tab-pane" id="messages">
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!--pc content end-->
+
+		<!--pc footer start-->
+		<footer>
+			<p class="text-center">Copyright © 2008-2016 权所有京ICP备09012701号-1</p>
+			<p class="text-center">6 瑞美嘉信国（权所有京ICP备090127</p>
+		</footer>
+
+		<!--pc footer end-->
+
+	</body>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="../plugins/jquery/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="../plugins/bootstrap_v3.3.3/dist/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+	</script>
+
+</html>

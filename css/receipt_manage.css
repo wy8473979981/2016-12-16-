@@ -1,0 +1,116 @@
+header {
+  width: 100%;
+  min-height: 100px;
+  background-image: url("../images/header_bg.png"); }
+  header .header {
+    min-height: 100px;
+    min-width: 1024px;
+    padding: 0 100px;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center; }
+    header .header .row_center {
+      display: -webkit-flex;
+      display: flex;
+      align-items: center; }
+      header .header .row_center .header_nav .hn_ul {
+        height: 52px;
+        margin: 45px 0 0;
+        line-height: 52px; }
+        header .header .row_center .header_nav .hn_ul .tabLi {
+          border-bottom: 2px solid #fff; }
+        header .header .row_center .header_nav .hn_ul li {
+          float: left; }
+          header .header .row_center .header_nav .hn_ul li a {
+            color: #fff;
+            padding: 30px; }
+        @media all and (max-width: 1024px) {
+          header .header .row_center .header_nav .hn_ul li a {
+            color: #fff;
+            padding: 19px; } }
+      header .header .row_center .header_help .help_top .hp_ul li {
+        float: right;
+        padding: 0 15px 15px; }
+        header .header .row_center .header_help .help_top .hp_ul li a {
+          color: #fff; }
+      header .header .row_center .header_help .help_bottom .shopCar {
+        position: relative;
+        float: right; }
+        header .header .row_center .header_help .help_bottom .shopCar .carNumber {
+          width: 35px;
+          height: 23px;
+          position: absolute;
+          top: -11px;
+          right: -17px;
+          background-color: #ff7a7a;
+          color: #fff;
+          text-align: center;
+          line-height: 23px;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          border-radius: 50%; }
+      header .header .row_center .header_help .help_bottom .v_search {
+        float: right;
+        margin-right: 20px; }
+        header .header .row_center .header_help .help_bottom .v_search .in_con {
+          width: 365px;
+          padding: 2px;
+          background: #fff;
+          height: 36px;
+          -webkit-border-radius: 3px;
+          -moz-border-radius: 3px;
+          border-radius: 3px; }
+          header .header .row_center .header_help .help_bottom .v_search .in_con .search_input {
+            outline: none;
+            width: 280px;
+            height: 32px;
+            line-height: 32px;
+            vertical-align: middle;
+            border: none;
+            background: #fff;
+            padding-left: 5px;
+            float: left; }
+          header .header .row_center .header_help .help_bottom .v_search .in_con .search_b {
+            width: 80px;
+            height: 32px;
+            border: none;
+            float: left;
+            color: #fff;
+            font-size: 15px;
+            background: #37a3b9; }
+        @media all and (max-width: 1024px) {
+          header .header .row_center .header_help .help_bottom .v_search {
+            margin-right: 20px; }
+            header .header .row_center .header_help .help_bottom .v_search .in_con {
+              width: 190px; }
+              header .header .row_center .header_help .help_bottom .v_search .in_con .search_input {
+                width: 125px; }
+              header .header .row_center .header_help .help_bottom .v_search .in_con .search_b {
+                width: 60px; } }
+        @media (min-width: 1025px) and (max-width: 1366px) {
+          header .header .row_center .header_help .help_bottom .v_search {
+            margin-right: 20px; }
+            header .header .row_center .header_help .help_bottom .v_search .in_con {
+              width: 310px; }
+              header .header .row_center .header_help .help_bottom .v_search .in_con .search_input {
+                width: 245px; }
+              header .header .row_center .header_help .help_bottom .v_search .in_con .search_b {
+                width: 60px; } }
+
+footer {
+  width: 100%;
+  height: 110px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  color: #fff;
+  background-color: #000;
+  margin: 0 auto; }
+  footer p:nth-child(1) {
+    margin-top: 30px; }
+
+@media all and (max-width: 768px) {
+  footer {
+    height: 80px; } }
+
+/*# sourceMappingURL=receipt_manage.css.map */

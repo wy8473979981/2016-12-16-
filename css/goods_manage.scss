@@ -1,0 +1,324 @@
+.modal {
+    .modal-backdrop {
+        background-color: #FFFF00;
+        opacity: 0;
+        filter:alpha(opacity=0);
+    }
+    .modal-dialog {
+        margin-top: 180px;
+        .modal-body {
+            .row {
+                margin: 5px 0;
+            }
+            .select2-container {
+                width: 100%;
+            }
+        }
+    }
+    .modal-header,
+    .modal-footer {
+        border: none;
+        text-align: center;
+    }
+}
+.content {
+    margin: 110px auto 130px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @media all and (max-width:640px) {
+        & {
+            margin: 2.1rem auto 2.2rem;
+        }
+    }
+    .nav-tabs {
+        margin-top: 50px;
+        padding-bottom: 5px;
+        border-bottom: 2px solid #28aac5;
+        li {
+            a {
+                border: none;
+                -webkit-border-radius: 4px;
+                -moz-border-radius: 4px;
+                border-radius: 4px;
+                color: #606060;
+                &:hover,
+                &:active,
+                &:focus {
+                    border: none;
+                    color: #fff;
+                    background-color: #28aac5;
+                }
+            }
+        }
+        li.active a {
+            color: #fff;
+            background-color: #28aac5;
+        }
+    }
+    .tab-content {
+        //我的订单
+        .orderContent {
+            min-height: 100px;
+            margin-top: 33px;
+            height: auto;
+            .order_list_1 {
+                border: 1px solid #ccc;
+                .table {
+                    margin-bottom: 0;
+                    .list_1_img_detail {
+                        .detail_img {
+                            width: 130px;
+                            height: 96px;
+                            margin: 10px;
+                            float: left;
+                            a img {
+                                border: 1px solid #ccc;
+                            }
+                        }
+                        .detail_text {
+                            margin: 10px;
+                            float: left;
+                            p:nth-child(2) {
+                                margin-top: 20px;
+                            }
+                        }
+                    }
+                    .price_box {
+                        margin: 10px;
+                        p {
+                            margin: 20px;
+                        }
+                    }
+                    tr:first-child td:last-child {
+                        border-left: 1px solid #ccc;
+                    }
+                }
+            }
+        }
+        //收货管理
+        .formContent {
+            border: 1px solid #ccc;
+            margin-top: 33px;
+            table {
+                margin: 0;
+                caption {
+                    line-height: 50px;
+                    .btn-default {
+                        border-color: #28aac5;
+                        a {
+                            color: #28aac5;
+                        }
+                    }
+                }
+                thead {
+                    background-color: #f4f4f4;
+                }
+                tr {
+                    th,
+                    td {
+                        padding: 22px 8px;
+                    }
+                }
+                tbody {
+                    tr {
+                        td:last-child {
+                            a:nth-child(2) {
+                                margin: 0 20px;
+                                color: red;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// phone content style start
+.phone_address_list {
+    display: none;
+}
+.p_add_address {
+    display: none;
+}
+@media all and (max-width:640px) {
+    .pc_messages_dom {
+        display: none;
+    }
+    .content {
+        margin: 1.1rem auto 1.3rem;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        @media all and (max-width:640px) {
+            & {
+                margin: 2.1rem auto 2.2rem;
+            }
+        }
+        .nav-tabs {
+            margin-top: 0.1rem;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #28aac5;
+            display: -webkit-flex;
+            display: flex;
+            li {
+                flex: 1;
+                text-align: center;
+                a {
+                    border: none;
+                    -webkit-border-radius: 4px;
+                    -moz-border-radius: 4px;
+                    border-radius: 4px;
+                    color: #606060;
+                    &:hover,
+                    &:active,
+                    &:focus {
+                        border: none;
+                        color: #fff;
+                        background-color: #28aac5;
+                    }
+                }
+                .active {
+                    color: #fff;
+                    background-color: #28aac5;
+                }
+            }
+        }
+        .tab-content {
+            //我的订单
+            .orderContent {
+                min-height: 100px;
+                margin-top: 33px;
+                height: auto;
+                .order_list_1 {
+                    border: 1px solid #ccc;
+                    .table {
+                        margin-bottom: 0;
+                        .list_1_img_detail {
+                            .detail_img {
+                                width: 130px;
+                                height: 96px;
+                                margin: 10px;
+                                float: left;
+                                a img {
+                                    border: 1px solid #ccc;
+                                }
+                            }
+                            .detail_text {
+                                margin: 10px;
+                                float: left;
+                                p:nth-child(2) {
+                                    margin-top: 20px;
+                                }
+                            }
+                        }
+                        .price_box {
+                            margin: 10px;
+                            p {
+                                margin: 20px;
+                            }
+                        }
+                        tr:first-child td:last-child {
+                            border-left: 1px solid #ccc;
+                        }
+                    }
+                }
+            }
+            //收货管理
+            .formContent {
+                border: none;
+                margin-top: 0;
+                .phone_address_list {
+                    display: block;
+                    .p_new_address {
+                        margin: 0.2rem 0;
+                    }
+                    .card {
+                        font-size: 0.28rem;
+                        margin-bottom: 0.24rem;
+                        border: 0.01rem solid #d1d1d1;
+                        border-radius: 0.06rem;
+                        box-shadow: 0 0.04rem 0.08rem rgba(50, 50, 50, 0.3);
+                        .card_info {
+                            padding: 0.2rem;
+                            border-radius: 0.06rem 0.06rem 0 0;
+                            border-bottom: 0.01rem solid #e1e1e1;
+                            background-color: #fff;
+                            line-height: 1.5;
+                            p:first-child {
+                                span:first-child {
+                                    float: left;
+                                }
+                                span:last-child {
+                                    float: right;
+                                }
+                            }
+                        }
+                        .card_bottom {
+                            padding: 0.12rem 0.2rem 0.04rem;
+                            border-radius: 0 0 0.06rem 0.06rem;
+                            border-top: 0.01rem solid #f2f2f2;
+                            background-color: #f4f4f4;
+                            color: #5e5e5e;
+                            overflow: hidden;
+                            .card_bottom_left {
+                                float: left;
+                                .check {
+                                    display: -webkit-inline-box;
+                                    display: -webkit-inline-flex;
+                                    display: -moz-inline-box;
+                                    display: -ms-inline-flexbox;
+                                    display: inline-flex;
+                                    -webkit-box-align: center;
+                                    -webkit-align-items: center;
+                                    -moz-box-align: center;
+                                    -ms-flex-align: center;
+                                    align-items: center;
+                                    .check-text {
+                                        margin-left: 0.1rem;
+                                    }
+                                }
+                            }
+                            .card_bottom_right {
+                                float: right;
+                                .operate_item {
+                                    display: -webkit-inline-box;
+                                    display: -webkit-inline-flex;
+                                    display: -moz-inline-box;
+                                    display: -ms-inline-flexbox;
+                                    display: inline-flex;
+                                    -webkit-box-align: center;
+                                    -webkit-align-items: center;
+                                    -moz-box-align: center;
+                                    -ms-flex-align: center;
+                                    align-items: center;
+                                    margin-left: 0.4rem;
+                                }
+                            }
+                        }
+                    }
+                }
+                //移动端添加新地址
+                .p_add_address {
+                    display: none;
+                    .p_add_address_btn {
+                        div {
+                            button:last-child {
+                                float: right;
+                            }
+                        }
+                    }
+                    .col-xs-12 {
+                        margin: 0.15rem 0;
+                    }
+                    .select2-container {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+// phone content style end
