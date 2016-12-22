@@ -143,39 +143,77 @@ header.pc_dom {
             color: #fff; }
           .phone_dom .p_nav .p_ul li:last-child a:nth-child(2) {
             margin-left: 20px; } }
-.order_success {
-  margin-top: 30px;
-  border: 1px solid #ccc; }
-  .order_success .order_status {
-    padding: 40px;
-    border-bottom: 1px solid #ccc; }
-  .order_success .order_reminder {
-    margin: 20px 0;
-    font-size: 18px; }
-  .order_success .order_info_btn {
-    margin: 20px 0; }
-  .order_success .order_pay_mode {
-    border-bottom: 1px solid #ccc; }
-    .order_success .order_pay_mode p {
-      margin: 20px 40px;
-      font-size: 16px; }
-    .order_success .order_pay_mode .order_pm_btn {
+.content {
+  margin: 0 auto; }
+  .content .order_success {
+    margin-top: 30px;
+    border: 1px solid #ccc; }
+    .content .order_success .order_status {
+      padding: 40px;
+      border-bottom: 1px solid #ccc; }
+    .content .order_success .order_reminder {
+      margin: 20px 0;
+      font-size: 18px; }
+    .content .order_success .order_info_btn {
+      margin: 20px 0; }
+    .content .order_success .order_pay_mode {
+      border-bottom: 1px solid #ccc; }
+      .content .order_success .order_pay_mode p {
+        margin: 20px 40px;
+        font-size: 16px; }
+      .content .order_success .order_pay_mode .order_pm_btn {
+        margin: 20px 40px; }
+        .content .order_success .order_pay_mode .order_pm_btn .btn-primary {
+          border: 1px solid #31aac2;
+          background-color: #fff;
+          color: #31aac2; }
+        .content .order_success .order_pay_mode .order_pm_btn .btn-default {
+          background-color: #ccc; }
+    .content .order_success .go_pay {
       margin: 20px 40px; }
-      .order_success .order_pay_mode .order_pm_btn .btn-primary {
+      .content .order_success .go_pay .btn-primary {
+        background-color: #31aac2;
         border: 1px solid #31aac2;
-        background-color: #fff;
-        color: #31aac2; }
-      .order_success .order_pay_mode .order_pm_btn .btn-default {
-        background-color: #ccc; }
-  .order_success .go_pay {
-    margin: 20px 40px; }
-    .order_success .go_pay .btn-primary {
-      background-color: #31aac2;
-      border: 1px solid #31aac2; }
+        padding: 6px 50px; }
 
 .clearBoth {
   clear: both; }
 
+@media all and (max-width: 640px) {
+  .content {
+    margin: 0 auto;
+    padding: 0; }
+    .content .order_success {
+      margin-top: 0;
+      border: none; }
+      .content .order_success .order_status {
+        padding: 0.4rem;
+        border-bottom: 1px solid #ccc; }
+      .content .order_success .order_reminder {
+        margin: 20px 0;
+        font-size: 18px; }
+      .content .order_success .order_info_btn {
+        margin: 20px 0; }
+      .content .order_success .order_pay_mode {
+        border-bottom: 1px solid #ccc; }
+        .content .order_success .order_pay_mode p {
+          margin: 0.2rem 0.4rem;
+          font-size: 16px; }
+        .content .order_success .order_pay_mode .order_pm_btn {
+          margin: 0.2rem 0.4rem; }
+          .content .order_success .order_pay_mode .order_pm_btn .btn-primary {
+            border: 1px solid #31aac2;
+            background-color: #fff;
+            color: #31aac2; }
+          .content .order_success .order_pay_mode .order_pm_btn .btn-default {
+            background-color: #ccc; }
+      .content .order_success .go_pay {
+        margin: 0.2rem 0.4rem;
+        text-align: center; }
+        .content .order_success .go_pay .btn-primary {
+          background-color: #31aac2;
+          border: 1px solid #31aac2;
+          padding: 6px 50px; } }
 footer {
   width: 100%;
   height: 110px;
