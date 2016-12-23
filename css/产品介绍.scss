@@ -1,0 +1,564 @@
+header.pc_dom {
+    width: 100%;
+    min-height: 100px;
+    background-image: url("../images/header_bg.png");
+    .header {
+        min-height: 100px;
+        min-width: 1024px;
+        padding: 0 100px;
+        display: -webkit-flex;
+        display: flex;
+        align-items: center;
+        .row_center {
+            display: -webkit-flex;
+            display: flex;
+            align-items: center;
+            .header_logo {}
+            .header_nav {
+                .hn_ul {
+                    height: 68px;
+                    margin: 30px 0 0;
+                    line-height: 68px;
+                    .tabLi {
+                        border-bottom: 2px solid #fff;
+                    }
+                    li {
+                        float: left;
+                        margin: 0 30px;
+                        a {
+                            color: #fff;
+                        }
+                    }
+                    @media all and (max-width:1024px) {
+                        li {
+                            margin: 0 19px;
+                            a {
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+            .header_help {
+                .help_top {
+                    .hp_ul {
+                        li {
+                            float: right;
+                            padding: 0 15px 15px;
+                            a {
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+                .help_bottom {
+                    .shopCar {
+                        position: relative;
+                        float: right;
+                        .carNumber {
+                            width: 35px;
+                            height: 23px;
+                            position: absolute;
+                            top: -11px;
+                            right: -17px;
+                            background-color: #ff7a7a;
+                            color: #fff;
+                            text-align: center;
+                            line-height: 23px;
+                            -webkit-border-radius: 50%;
+                            -moz-border-radius: 50%;
+                            border-radius: 50%;
+                        }
+                    }
+                    .v_search {
+                        float: right;
+                        margin-right: 20px;
+                        .in_con {
+                            width: 365px;
+                            padding: 2px;
+                            background: #fff;
+                            height: 36px;
+                            -webkit-border-radius: 3px;
+                            -moz-border-radius: 3px;
+                            border-radius: 3px;
+                            .search_input {
+                                outline: none;
+                                width: 280px;
+                                height: 32px;
+                                line-height: 32px;
+                                vertical-align: middle;
+                                border: none;
+                                background: #fff;
+                                padding-left: 5px;
+                                float: left;
+                            }
+                            .search_b {
+                                width: 80px;
+                                height: 32px;
+                                border: none;
+                                float: left;
+                                color: #fff;
+                                font-size: 15px;
+                                background: #37a3b9;
+                            }
+                        }
+                        @media all and (max-width:1024px) {
+                            & {
+                                margin-right: 20px;
+                                .in_con {
+                                    width: 190px;
+                                    .search_input {
+                                        width: 125px;
+                                    }
+                                    .search_b {
+                                        width: 60px;
+                                    }
+                                }
+                            }
+                        }
+                        @media (min-width: 1025px) and (max-width: 1366px) {
+                            & {
+                                margin-right: 20px;
+                                .in_con {
+                                    width: 310px;
+                                    .search_input {
+                                        width: 245px;
+                                    }
+                                    .search_b {
+                                        width: 60px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// phone head style start
+.phone_dom {
+    display: none;
+}
+@media all and (max-width:640px) {
+    .pc_dom {
+        display: none;
+    }
+    .phone_dom {
+        display: block;
+        width: 100%;
+        height: 1.95rem;
+        background-image: url("../images/head_phone_bg.png");
+        .p_head {
+            height: 1.2rem;
+            display: -webkit-flex;
+            display: flex;
+            text-align: center;
+            line-height: 1.2rem;
+            .p_logo {
+                flex: 2;
+            }
+            .p_help {
+                flex: 3;
+                .p_hp_ul {
+                    li {
+                        float: right;
+                        margin: 0 0.1rem;
+                        a {
+                            color: #fff;
+                        }
+                        &:first-child {
+                            margin-right: 0.2rem;
+                        }
+                    }
+                }
+            }
+        }
+        .p_nav {
+            height: 0.75rem;
+            .p_ul {
+                height: 0.75rem;
+                display: -webkit-flex;
+                display: flex;
+                text-align: center;
+                line-height: 0.75rem;
+                .p_ul_li_active {
+                    border-bottom: 5px solid #fff;
+                }
+                li {
+                    flex: 1;
+                    a {
+                        color: #fff;
+                    }
+                    &:last-child {
+                        a:nth-child(2) {
+                            margin-left: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// phone head style end
+.content {
+    margin: 110px auto 130px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @media all and (max-width:640px) {
+        & {
+            margin: 2.1rem auto 2.2rem;
+        }
+    }
+    .nav-tabs {
+        margin-top: 50px;
+        padding-bottom: 5px;
+        border-bottom: 2px solid #28aac5;
+        li {
+            a {
+                border: none;
+                -webkit-border-radius: 4px;
+                -moz-border-radius: 4px;
+                border-radius: 4px;
+                color: #606060;
+                &:hover,
+                &:active,
+                &:focus {
+                    border: none;
+                    color: #fff;
+                    background-color: #28aac5;
+                }
+            }
+        }
+        li.active a {
+            color: #fff;
+            background-color: #28aac5;
+        }
+    }
+    .tab-content {
+        .text_color_red {
+            color: red;
+        }
+        .order_info {
+            border: 1px solid #ccc;
+            margin-top: 33px;
+            .order_number {
+                margin: 15px 0 0;
+                border-bottom: 1px solid #ccc;
+                .order_date {
+                    float: right;
+                }
+            }
+            .order_plan_status {
+                margin: 15px 0;
+                border-bottom: 1px solid #ccc;
+                .box_status {
+                    height: 20px;
+                    width: 85%;
+                    margin: 30px auto;
+                    background-image: url("../images/Rectangle.png");
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    background-position: center;
+                }
+            }
+            .order_list {
+                .item {
+                    border-bottom: 1px solid #CCCCCC;
+                    margin-bottom: 15px;
+                    .left {
+                        .order_img {
+                            display: inline-block;
+                            width: 130px;
+                            height: 96px;
+                            float: left;
+                            border: 1px solid #ccc;
+                            margin: 0 15px 15px 0;
+                            img {
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                        .order_dec {
+                            float: left;
+                        }
+                    }
+                }
+            }
+            .pay_address {
+                .addressContent {
+                    .address {
+                        float: left;
+                        ul {
+                            background-color: #f4f4f4;
+                        }
+                        li {
+                            margin: 15px 0;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                        }
+                    }
+                    .money {
+                        float: right;
+                        .all_money_info {
+                            height: 225px;
+                            border: 1px solid #ccc;
+                            padding: 10px;
+                            p {
+                                margin-top: 25px;
+                            }
+                            p:first-child {
+                                margin-top: 15px;
+                            }
+                            .text_right {
+                                float: right;
+                            }
+                        }
+                    }
+                }
+                .pay {
+                    margin: 15px 0;
+                    .btn_cancel {
+                        border: 1px solid #28aac5;
+                        color: #28aac5;
+                        &:hover {
+                            background-color: #fff;
+                        }
+                    }
+                    .btn_yes {
+                        border: 1px solid #28aac5;
+                        background-color: #28aac5;
+                    }
+                }
+            }
+        }
+    }
+    .clearBoth {
+        clear: both;
+    }
+}
+//phone content style start
+@media all and (max-width:640px) {
+    .pc_messages_dom {
+        display: none;
+    }
+    .content {
+        margin: 1.1rem auto 1.3rem;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        @media all and (max-width:640px) {
+            & {
+                margin: 2.1rem auto 2.2rem;
+            }
+        }
+        .nav-tabs {
+            margin-top: 0.1rem;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #28aac5;
+            display: -webkit-flex;
+            display: flex;
+            li {
+                flex: 1;
+                text-align: center;
+                a {
+                    border: none;
+                    -webkit-border-radius: 4px;
+                    -moz-border-radius: 4px;
+                    border-radius: 4px;
+                    color: #606060;
+                    &:hover,
+                    &:active,
+                    &:focus {
+                        border: none;
+                        color: #fff;
+                        background-color: #28aac5;
+                    }
+                }
+                .active {
+                    color: #fff;
+                    background-color: #28aac5;
+                }
+            }
+        }
+        .tab-content {
+            .order_info {
+                border: none;
+                .box {
+                    border: 1px solid #ccc;
+                    margin-bottom: 0.2rem;
+                }
+                .order_number {
+                    margin: 0.15rem 0 0;
+                    border-bottom: 1px solid #ccc;
+                    .order_date {
+                        float: right;
+                    }
+                }
+                .order_plan_status {
+                    .no_padding {
+                        padding: 0;
+                    }
+                    .box_status {
+                        margin: 0.4rem auto 0.2rem;
+                    }
+                }
+                .phone_status_box {
+                    height: 1.1rem;
+                    overflow-y: hidden;
+                    position: relative;
+                    border-bottom: 1px solid #ccc;
+                    clear: both;
+                    ul.pinxiang1-list {
+                        padding: 0 10px 20px;
+                        margin-top: 0.2rem;
+                        width: 100%;
+                        box-sizing: border-box;
+                        overflow-x: scroll;
+                        overflow-y: hidden;
+                        white-space: nowrap;
+                        float: left;
+                        -webkit-overflow-scrolling: touch;
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        li {
+                            position: relative;
+                            display: inline-block;
+                            .status {
+                                margin: 0 0.2rem;
+                            }
+                        }
+                        .status_bg {
+                            background-image: url("../images/Rectangle.png");
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            background-size: contain;
+                        }
+                        .status2 {
+                            display: block;
+                            width: 7rem;
+                            height: 0.5rem;
+                            margin-left: 0.79rem;
+                        }
+                    }
+                }
+                .order_list {
+                    padding: 0;
+                    .item {
+                        border-bottom: 1px solid #CCCCCC;
+                        &:last-child {
+                            border-bottom: none;
+                        }
+                        margin: 0;
+                        .left {
+                            padding: 0;
+                            .order_img {
+                                display: inline-block;
+                                width: 1.8rem;
+                                height: 1.3rem;
+                                float: left;
+                                border: 1px solid #ccc;
+                                margin: 0.2rem 0.1rem;
+                                img {
+                                    width: 100%;
+                                    height: 100%;
+                                }
+                            }
+                            .order_dec {
+                                float: left;
+                                h5 {
+                                    margin: 0.25rem 0;
+                                }
+                            }
+                        }
+                        .right {
+                            padding: 0;
+                            span {
+                                padding: 0.1rem;
+                            }
+                        }
+                    }
+                }
+                .pay_address {
+                    .addressContent {
+                        .address {
+                            padding: 0;
+                            ul {
+                                background-color: #f4f4f4;
+                            }
+                            li {
+                                margin: 15px 0;
+                                white-space: nowrap;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                            }
+                        }
+                        .money {
+                            padding: 0;
+                            margin-bottom: 0.2rem;
+                            .all_money_info {
+                                height: 180px;
+                                border: 1px solid #ccc;
+                                padding: 10px;
+                                p {
+                                    margin: 15px 0;
+                                }
+                                .text_right {
+                                    float: right;
+                                }
+                            }
+                        }
+                    }
+                    .pay {
+                        margin: 15px 0;
+                        .btn_cancel {
+                            border: 1px solid #28aac5;
+                            color: #28aac5;
+                            &:hover {
+                                background-color: #fff;
+                            }
+                        }
+                        .btn_yes {
+                            border: 1px solid #28aac5;
+                            background-color: #28aac5;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// phone content style end
+footer {
+    width: 100%;
+    height: 110px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    color: #fff;
+    background-color: #000;
+    margin: 0 auto;
+    p:nth-child(1) {
+        margin-top: 30px;
+    }
+}
+@media all and (max-width:768px) {
+    footer {
+        height: 80px;
+    }
+}
+// phone footer style start
+@media all and (max-width:640px) {
+    footer {
+        height: 2rem;
+        p {
+            padding: 0 0.25rem;
+        }
+    }
+}
+// phone footer style end
