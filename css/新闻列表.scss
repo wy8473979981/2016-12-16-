@@ -201,16 +201,9 @@ header.pc_dom {
     }
 }
 // phone head style end
+//pc content style start
 .content {
-    .product_img {
-        height: 410px;
-        margin-top: 10px;
-        border: 1px solid #ccc;
-        img {
-            width: 100%;
-            height: 100%;
-        }
-    }
+    margin: 0 auto;
     .nav-tabs {
         margin-top: 30px;
         padding-bottom: 5px;
@@ -236,39 +229,62 @@ header.pc_dom {
             background-color: #28aac5;
         }
     }
-    .tab-content {}
-}
-//phone content style start
-@media all and (max-width:640px) {
-    .content {
-        .product_img {
-            height: 4rem;
-            margin-top: 0.1rem;
-            border: 1px solid #ccc;
+    .new_list {
+        border-bottom: 1px solid #ccc;
+        .new_img {
+            margin: 14px auto;
             img {
                 width: 100%;
                 height: 100%;
             }
         }
-        .p_product_characteristic{
-            li{
-                border-bottom: 1px solid #ccc;
-                padding: 0.15rem;
-                text-align: center;
-                display: -webkit-flex;
-                display: flex;
-                span{
-                    display: inline-block;
-                    flex: 1;
+        .new_info {
+            h4 {
+                margin-top: 15px;
+            }
+            .character {
+                display: -webkit-box;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+            }
+        }
+    }
+}
+//pc content style end
+//phone content style start
+@media all and (max-width:640px) {
+    .content {
+        .new_list {
+            border-bottom: 1px solid #ccc;
+            .new_img {
+                height: 1.5rem;
+                padding: 0;
+                margin: 14px auto;
+                img {
+                    width: 100%;
+                    height: 100%;
                 }
-                span:first-child{
-                    text-align: right;
-                    margin-right: 0.4rem;
+            }
+            .new_info {
+                h4 {
+                    margin: 0.3rem auto 0;
                 }
-                span:last-child{
-                    text-align: left;
+                p {
+                    margin: 0;
                 }
-                
+                .character {
+                    display: -webkit-box;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                }
             }
         }
     }

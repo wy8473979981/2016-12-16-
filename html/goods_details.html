@@ -6,10 +6,10 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>商品列表</title>
-		
+
 		<!--rem js-->
 		<script src="../js/rem.js" type="text/javascript" charset="utf-8"></script>
-		
+
 		<!--style reset -->
 		<link rel="stylesheet" type="text/css" href="../css/reset.css" />
 
@@ -148,7 +148,7 @@
 		<section class="container content">
 			<div class="col-xs-12">
 				<div class="row">
-					
+
 				</div>
 			</div>
 
@@ -169,5 +169,14 @@
 	<script src="../plugins/jquery/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
 	<!-- Include all compiled plugins (below), or include individual files as needed -->
 	<script src="../plugins/bootstrap_v3.3.3/dist/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$('.hn_ul li').click(function() {
+			$(this).addClass('tabLi').siblings().removeClass('tabLi');
+			if($(this).is('.tabLi')) {
+				sessionStorage.setItem("key", "tabLi");
+			}
+
+		});
+	</script>
 
 </html>
