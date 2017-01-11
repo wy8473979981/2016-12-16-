@@ -222,6 +222,7 @@ header.pc_dom {
                 background-size: cover;
             }
             .modal-body {
+                margin-top: 30px;
                 .center {
                     float: none;
                     margin: 0 auto;
@@ -231,19 +232,19 @@ header.pc_dom {
                         width: 100%;
                     }
                 }
-                .Third_party_login_logo{
-                    img{
-                        width:25%;
+                .Third_party_login_logo {
+                    img {
+                        width: 25%;
                     }
-                    img:last-child{
-                        float:right;
+                    img:last-child {
+                        float: right;
                     }
                 }
             }
         }
     }
-    .modal-header,
-    .modal-footer {
+    .modal-footer,
+    .modal-header {
         border: none;
         text-align: center;
     }
@@ -271,8 +272,8 @@ header.pc_dom {
                 -moz-border-radius: 4px;
                 border-radius: 4px;
                 color: #606060;
-                &:hover,
-                &:focus {
+                &:focus,
+                &:hover {
                     border: none !important;
                     color: #606060 !important;
                     background-color: #fff !important;

@@ -159,17 +159,19 @@ header.pc_dom {
       justify-content: center;
       background: url("../images/modal_head_bg.png") no-repeat;
       background-size: cover; }
-    .modal .modal-dialog .modal-content .modal-body .center {
-      float: none;
-      margin: 0 auto; }
-    .modal .modal-dialog .modal-content .modal-body .Third_party_login img {
-      width: 100%; }
-    .modal .modal-dialog .modal-content .modal-body .Third_party_login_logo img {
-      width: 25%; }
-    .modal .modal-dialog .modal-content .modal-body .Third_party_login_logo img:last-child {
-      float: right; }
-.modal .modal-header,
-.modal .modal-footer {
+    .modal .modal-dialog .modal-content .modal-body {
+      margin-top: 30px; }
+      .modal .modal-dialog .modal-content .modal-body .center {
+        float: none;
+        margin: 0 auto; }
+      .modal .modal-dialog .modal-content .modal-body .Third_party_login img {
+        width: 100%; }
+      .modal .modal-dialog .modal-content .modal-body .Third_party_login_logo img {
+        width: 25%; }
+      .modal .modal-dialog .modal-content .modal-body .Third_party_login_logo img:last-child {
+        float: right; }
+.modal .modal-footer,
+.modal .modal-header {
   border: none;
   text-align: center; }
 
@@ -193,7 +195,7 @@ header.pc_dom {
       -moz-border-radius: 4px;
       border-radius: 4px;
       color: #606060; }
-      .content .nav-tabs li a:hover, .content .nav-tabs li a:focus {
+      .content .nav-tabs li a:focus, .content .nav-tabs li a:hover {
         border: none !important;
         color: #606060 !important;
         background-color: #fff !important; }
